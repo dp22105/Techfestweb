@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Techfest · Asia's Largest Science & Technology Festival · IIT Bombay</title>
+  <meta name="description" content="Techfest, IIT Bombay's annual science and technology festival. Competitions, lectures, exhibitions and workshops. 16–18 December 2026, Powai, Mumbai.">
+  <meta name="theme-color" content="#06070b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300..900&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Boot sequence -->
+  <div id="boot" aria-hidden="true">
+    <pre id="boot-log"></pre>
+    <span class="boot-skip">click to skip</span>
+  </div>
+
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="progress" aria-hidden="true"><i></i></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Techfest home"><span class="dot"></span>TECHFEST</a>
+    <nav id="menu" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#pillars">Experience</a>
+      <a href="#competitions">Competitions</a>
+      <a href="#road">Road to finale</a>
+      <a class="btn btn-sm" href="https://techfest.org" target="_blank" rel="noopener">Register ↗</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow rv"><span class="live"></span> IIT Bombay · Powai, Mumbai · 16 – 18 Dec 2026</p>
+
+      <h1 class="wordmark" id="wordmark" aria-label="Techfest">
+        <span class="ltr" aria-hidden="true">T</span><span class="ltr" aria-hidden="true">E</span><span class="ltr" aria-hidden="true">C</span><span class="ltr" aria-hidden="true">H</span><span class="ltr" aria-hidden="true">F</span><span class="ltr" aria-hidden="true">E</span><span class="ltr" aria-hidden="true">S</span><span class="ltr" aria-hidden="true">T</span>
+      </h1>
+
+      <div class="hero-row">
+        <p class="lede rv">Asia's largest science &amp; technology festival. Three days where students, builders and the world's sharpest minds collide on one campus.</p>
+
+        <div class="countdown rv" id="countdown" role="timer" aria-live="off">
+          <div><b id="cd-d">00</b><span>days</span></div>
+          <div><b id="cd-h">00</b><span>hrs</span></div>
+          <div><b id="cd-m">00</b><span>min</span></div>
+          <div><b id="cd-s">00</b><span>sec</span></div>
+          <p id="cd-note" class="cd-note">until doors open</p>
+        </div>
+      </div>
+
+      <div class="cta-row rv">
+        <a class="btn" href="#competitions">Explore competitions <i>→</i></a>
+        <a class="btn btn-ghost" href="#road">See the road to finale</a>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true"><span></span>scroll</div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-hidden="true">
+      <div class="track" data-dir="l">Meshmerize ✦ Perceptron Hackathon ✦ National Probability Challenge ✦ ThetaShift ✦ RoboReach ✦ India @ 71/100 ✦ ZeroCode ✦ International RoboRacer ✦ </div>
+      <div class="track alt" data-dir="r">Competitions ✺ Lectures ✺ Exhibitions ✺ Workshops ✺ Robotics ✺ AI ✺ Finance ✺ Aerospace ✺ Social impact ✺ </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" id="about">
+      <div class="sec-head rv">
+        <p class="kicker">01 / The festival</p>
+        <h2>Student-run. Planet-scale.</h2>
+        <p>Founded in 1998 and organised entirely by students of IIT Bombay, Techfest has grown from a campus event into a gathering that pulls in people from all over the world. Patronised by UNESCO and UNICEF.</p>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat rv"><b data-count="1998" data-plain="1">0</b><span>First edition</span></div>
+        <div class="stat rv"><b data-count="175000" data-suffix="+">0</b><span>Footfall in a recent edition</span></div>
+        <div class="stat rv"><b data-count="2500" data-suffix="+">0</b><span>Indian colleges reached</span></div>
+        <div class="stat rv"><b data-count="500" data-suffix="+">0</b><span>International universities</span></div>
+        <div class="stat rv"><b data-count="25" data-suffix="+">0</b><span>Competitions on the 2025–26 card</span></div>
+        <div class="stat rv"><b data-count="35000" data-suffix="+">0</b><span>Competition participants (2023)</span></div>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section class="pillars-wrap" id="pillars">
+      <div class="sec-head rv">
+        <p class="kicker">02 / The experience</p>
+        <h2>Four ways to be in the room.</h2>
+      </div>
+
+      <div class="pillars" id="pillars-list">
+        <article class="pillar active" tabindex="0">
+          <span class="num">01</span>
+          <svg class="art" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="18"/><circle cx="60" cy="60" r="34"/><circle cx="60" cy="60" r="50"/><path d="M60 10v100M10 60h100"/></svg>
+          <h3>Competitions</h3>
+          <p>From maze-solving bots and robotic arms to quant puzzles and AI hackathons, with zonal rounds across the country feeding one grand finale at IIT Bombay.</p>
+        </article>
+        <article class="pillar" tabindex="0">
+          <span class="num">02</span>
+          <svg class="art" viewBox="0 0 120 120" aria-hidden="true"><path d="M5 60h14l8-30 12 60 12-80 12 90 10-40h42"/></svg>
+          <h3>Lectures</h3>
+          <p>Scientists, astronauts, founders and policymakers on one stage. Past editions have hosted Nobel and Fields laureates, ISRO leadership and Gaganyaan astronauts.</p>
+        </article>
+        <article class="pillar" tabindex="0">
+          <span class="num">03</span>
+          <svg class="art" viewBox="0 0 120 120" aria-hidden="true"><rect x="14" y="14" width="40" height="40"/><rect x="66" y="14" width="40" height="40"/><rect x="14" y="66" width="40" height="40"/><rect x="66" y="66" width="40" height="40"/></svg>
+          <h3>Exhibitions</h3>
+          <p>Humanoids, drone shows and research demos. TechConnect puts IIT Bombay's own R&amp;D in front of industry, academia and the public.</p>
+        </article>
+        <article class="pillar" tabindex="0">
+          <span class="num">04</span>
+          <svg class="art" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100 60 20l40 80z"/><path d="M40 100 60 60l20 40"/></svg>
+          <h3>Workshops</h3>
+          <p>Hands-on sessions where you build something real, led by people who do this for a living. Bring a laptop. Leave with a project.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPETITIONS -->
+    <section class="comps" id="competitions">
+      <div class="sec-head rv">
+        <p class="kicker">03 / Compete</p>
+        <h2>Pick your arena.</h2>
+        <p>A sample of the 2026 card. Prize pools and dates as published on public competition listings; confirm the details on techfest.org before you register.</p>
+      </div>
+
+      <div class="filters rv" role="tablist" aria-label="Filter competitions">
+        <button class="chip on" data-f="all" role="tab" aria-selected="true">All</button>
+        <button class="chip" data-f="robotics" role="tab" aria-selected="false">Robotics</button>
+        <button class="chip" data-f="ai" role="tab" aria-selected="false">AI &amp; Code</button>
+        <button class="chip" data-f="quant" role="tab" aria-selected="false">Quant</button>
+        <button class="chip" data-f="impact" role="tab" aria-selected="false">Impact</button>
+      </div>
+
+      <div class="grid" id="grid">
+        <article class="card" data-cat="quant">
+          <span class="tag">Quant · with Jane Street</span>
+          <h3>National Probability Challenge</h3>
+          <p>Bayes, combinatorics, expectation and game theory. Pure quantitative reasoning under pressure.</p>
+          <div class="meta"><b>₹3.8L</b><span>prize pool · finale 16 Dec</span></div>
+        </article>
+        <article class="card" data-cat="ai">
+          <span class="tag">AI · IITB–Optiver Lab</span>
+          <h3>Perceptron Hackathon</h3>
+          <p>Efficient AI, agents that compete and cooperate, markets and trading intelligence. Abstract first, then the final in Powai.</p>
+          <div class="meta"><b>₹2L</b><span>prize pool · finals 15–18 Dec</span></div>
+        </article>
+        <article class="card" data-cat="impact">
+          <span class="tag">Social impact</span>
+          <h3>India @ 71/100</h3>
+          <p>Practical, evidence-based ideas for underserved communities. Shortlisted teams pitch on site.</p>
+          <div class="meta"><b>₹1L</b><span>prize pool · 3 themes</span></div>
+        </article>
+        <article class="card" data-cat="robotics">
+          <span class="tag">Robotics · Hardware</span>
+          <h3>ThetaShift</h3>
+          <p>One six-minute run to clear the course and maximise your score. City zonals decide who reaches the grand finale.</p>
+          <div class="meta"><b>₹1L</b><span>prize pool · teams of 1–4</span></div>
+        </article>
+        <article class="card" data-cat="robotics">
+          <span class="tag">Robotics · Autonomy</span>
+          <h3>Meshmerize</h3>
+          <p>Build a bot that explores a maze, maps it, then retraces the shortest path. No hand-holding allowed.</p>
+          <div class="meta"><b>₹80K</b><span>promoted prize money</span></div>
+        </article>
+        <article class="card" data-cat="robotics">
+          <span class="tag">Robotics · Precision</span>
+          <h3>RoboReach</h3>
+          <p>Drive a robotic arm through precise pick-and-place tasks. Speed, control and automation all count.</p>
+          <div class="meta"><b>Zonals → Finale</b><span>part of the ₹4.8L zonal pool</span></div>
+        </article>
+        <article class="card" data-cat="ai">
+          <span class="tag">AI · Product sprint</span>
+          <h3>ZeroCode Vibe Coding</h3>
+          <p>Prompt, build and demo a working product against the clock, with surprise constraints thrown in for finalists.</p>
+          <div class="meta"><b>Offline sprint</b><span>at IIT Bombay</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ROAD -->
+    <section class="road" id="road">
+      <div class="sec-head rv">
+        <p class="kicker">04 / The road to finale</p>
+        <h2>Where we are right now.</h2>
+        <p id="road-today" class="mono"></p>
+      </div>
+
+      <ol class="timeline" id="timeline">
+        <li data-date="2026-09-30"><time>30 Sep</time><div><h4>Registrations close</h4><p>Meshmerize, RoboReach and ZeroCode.</p></div></li>
+        <li data-date="2026-10-11"><time>11 Oct</time><div><h4>Gandhinagar zonal</h4><p>Regional qualifiers at IIT Gandhinagar.</p></div></li>
+        <li data-date="2026-10-15"><time>15 Oct</time><div><h4>Registrations close</h4><p>National Probability Challenge and India @ 71/100.</p></div></li>
+        <li data-date="2026-10-31"><time>31 Oct</time><div><h4>Perceptron abstracts due</h4><p>Round 1 of the AI hackathon.</p></div></li>
+        <li data-date="2026-11-10"><time>10 Nov</time><div><h4>Shortlists announced</h4><p>Probability Round 1 results. Perceptron finalists named.</p></div></li>
+        <li data-date="2026-12-15"><time>15 Dec</time><div><h4>Perceptron finals begin</h4><p>Teams land at IIT Bombay.</p></div></li>
+        <li data-date="2026-12-16" class="big"><time>16 – 18 Dec</time><div><h4>Techfest 2026</h4><p>Grand finales, lectures, exhibitions. Powai, Mumbai.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- PATRONS + CTA -->
+    <section class="patrons">
+      <p class="kicker rv">Patronised by</p>
+      <div class="patron-row rv"><span>UNESCO</span><span>UNICEF</span><span>CEE</span><span>SAYEN</span></div>
+    </section>
+
+    <section class="final">
+      <h2 class="rv">See you<br>at <em>Powai.</em></h2>
+      <a class="btn btn-big rv" href="https://techfest.org" target="_blank" rel="noopener">Go to techfest.org <i>↗</i></a>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© Techfest, IIT Bombay. Concept landing page.</span>
+    <span class="mono">Indian Institute of Technology Bombay · Powai · Mumbai 400076</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
